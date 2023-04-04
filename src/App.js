@@ -2,6 +2,7 @@ import "./App.css";
 import Profile from "./components/profile";
 import Video from "./components/video";
 import {Profiles} from "./components/challenge";
+import Props from "./components/props";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Video></Video>
       <Profile></Profile>
       <Profiles></Profiles>
+      <Props></Props>
     </div>
   );
 }
