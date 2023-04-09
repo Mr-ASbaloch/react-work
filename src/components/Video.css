@@ -1,0 +1,13 @@
+.Thumb{
+    /* background-color: blueviolet; */
+   color:black;
+    
+}
+.Box{
+    color: black;
+  
+  }
+.Main{
+    display: flex;
+background-color: blueviolet;
+  }

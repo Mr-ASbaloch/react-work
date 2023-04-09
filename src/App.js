@@ -1,37 +1,74 @@
 import "./App.css";
 import Profile from "./components/profile";
 import Video from "./components/video";
-import {Profiles} from "./components/challenge";
+import { Profiles } from "./components/challenge";
 import Props from "./components/props";
-import Conditional from "./components/condition";
-
 
 function App() {
-  let nam='react app'
+  // let Obj= {
+  //   title: "Html Css Javascript",
+  //   time:"5 year ago" ,
+  //    channel:"web",
+  //     views:"7k views"
+  // }
+
+  // let nam='react app'
+  let Videos = [
+    { 
+      id:1,
+      smile: true,
+      title: "Python",
+      time: "5 year ago",
+      channel: "web",
+      views: "7k views",
+    },
+    {
+      id:2,
+      smile: true,
+      title: "Python",
+      time: "5 year ago",
+      channel: "web",
+      views: "7k views",
+    },
+    {
+      id:3, 
+      smile: true,
+      title: "Python",
+      time: "5 year ago",
+      channel: "web",
+      views: "7k views",
+      Verified: true,
+    },
+  ];
+
   return (
     <div className="App">
       <div>hello welcome</div>
-      {nam}
-      <Demo></Demo>
-      <Conditional></Conditional>
-      <Video></Video>
-      <Video></Video>
+      {/* {nam} */}
+
       <Profile></Profile>
       <Profiles></Profiles>
       <Props></Props>
-    </div>
-  );
-}
-function Demo() {
- 
-  return (
-    <div className="App">
-      <div>demo</div>
-    
-      <demo></demo>
+
+      {Videos.map((video) => (
+        <Video
+        key={video.id}
+          title={video.title}
+          time={video.time}
+
+          verified={video.Verified}
+          smile={video.smile}
+          channel={video.channel}
+          views={video.views}
+        ></Video>
+      ))}
+      {/* <Video  {...Obj}></Video>
+      <Video verified={true} smile={false} title="React js" time="5 year ago"  channel="web" views="7k views"></Video>
+      <Video title="Mongo DB" time="5 year ago"  channel="web" views="7k views"></Video>
+      <Video smile={true} title="Python" time="5 year ago"  channel="web" views="7k views"></Video> */}
+      
     </div>
   );
 }
 
- 
 export default App;

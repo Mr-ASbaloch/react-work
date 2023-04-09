@@ -1,3 +1,4 @@
+import Conditional from "./condition";
 
 export default function Profile() {
   return (
@@ -8,6 +9,7 @@ export default function Profile() {
      <Picture></Picture>
      <Picture></Picture>
      <Gallery></Gallery>
+     <Conditional></Conditional>
     
     </>
   );
@@ -16,6 +18,7 @@ export default function Profile() {
 
 // use of return without paranthesis
 function Picture() {
+ 
   return <img src="https://i.imgur.com/yXOvdOSs.jpg" alt="img"></img>;
 //   use  of other functions in one function
 
@@ -23,6 +26,7 @@ function Picture() {
 function Gallery() {
     return (
         <div>Gallery</div>
+        
        
     )
 }
