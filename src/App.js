@@ -3,6 +3,7 @@ import Profile from "./components/profile";
 import Video from "./components/video";
 import { Profiles } from "./components/challenge";
 import Props from "./components/props";
+import PLayButton from "./components/PLayButton";
 
 function App() {
   // let Obj= {
@@ -49,6 +50,7 @@ function App() {
       <Profile></Profile>
       <Profiles></Profiles>
       <Props></Props>
+      <PLayButton></PLayButton>
 
       {Videos.map((video) => (
         <Video
@@ -61,7 +63,10 @@ function App() {
           channel={video.channel}
           views={video.views}
         ></Video>
+      
       ))}
+
+      
       {/* <Video  {...Obj}></Video>
       <Video verified={true} smile={false} title="React js" time="5 year ago"  channel="web" views="7k views"></Video>
       <Video title="Mongo DB" time="5 year ago"  channel="web" views="7k views"></Video>
