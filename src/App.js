@@ -43,14 +43,16 @@ function App() {
   ];
 
   return (
+    <>
     <div className="App">
       <div>hello welcome</div>
       {/* {nam} */}
 
       <Profile></Profile>
       <Profiles></Profiles>
+      <PLayButton Message="Welcome" name="PlayButton"></PLayButton>
       <Props></Props>
-      <PLayButton></PLayButton>
+      
 
       {Videos.map((video) => (
         <Video
@@ -73,6 +75,7 @@ function App() {
       <Video smile={true} title="Python" time="5 year ago"  channel="web" views="7k views"></Video> */}
       
     </div>
+   </>
   );
 }
 
