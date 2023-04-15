@@ -1,9 +1,16 @@
 // import { logDOM } from "@testing-library/react";
 
-function PlayButton() {
-
+function PlayButton({ message, onSmash, children, onPlay, onPause }) {
+  
+  let playing = false;
   function handleClick() {
-     alert("welcome")
+    // alert(message);
+    // onSmash();
+    
+    if (playing) onPause();
+    else onPlay();
+
+    playing = !playing;
   }
   return (
     <button
@@ -14,10 +21,10 @@ function PlayButton() {
         color: "black",
       }}
       // onClick={() => console.log("play")
-      onClick={ handleClick}
-      
+      onClick={handleClick}
     >
-    welcome
+      {/* {name} */}
+      {children} {playing ? '><' : '||'}
     </button>
   );
 }
