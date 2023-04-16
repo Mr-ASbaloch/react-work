@@ -3,13 +3,15 @@
 function PlayButton({ message, onSmash, children, onPlay, onPause }) {
   
   let playing = false;
-  function handleClick() {
+  function handleClick(e) {
+    console.log(e);
+    // e.stopPropagation();
+    // e.preventDefault ();
     // alert(message);
-    // onSmash();
+    onSmash();
     
     if (playing) onPause();
     else onPlay();
-
     playing = !playing;
   }
   return (

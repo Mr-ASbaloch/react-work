@@ -53,7 +53,7 @@ function App() {
         <PLayButton
           //  message="Play-msg"
           // name="Play-Button"
-          onSmash={ ()=>alert('Play')}
+          onSmash={()=>alert('Play')}
         >
         
           play
