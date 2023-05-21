@@ -1,3 +1,6 @@
+import Header from "./components/Header";
+import "./App.css";
+import Movie from "./components/Movie";
 // import "./App.css";
 // import Profile from "./components/profile";
 // import Video from "./components/video";
@@ -57,7 +60,7 @@
 //           // name="Play-Button"
 //           onSmash={()=>alert('Play')}
 //         >
-        
+
 //           play
 //         </PLayButton>
 //         {/* <PLayButton
@@ -65,11 +68,11 @@
 //           // name="Pause-Button"
 //           onSmash={() => console.log('pause')}
 //         >
-          
+
 //           Pause
 //         </PLayButton> */}
 //         <PLayButton
-         
+
 //           onPlay={() => console.log('Play')}
 //           onPause={() => console.log('pause')}
 //         >
@@ -98,13 +101,21 @@
 //   );
 // }
 
-
-function App (){
-    return(
-        <>
-            <h2>hello</h2>
-        </>
-    )
+function App() {
+  return (
+    <>
+      <Header></Header>
+      <div className="Main">
+        <Movie></Movie> 
+        <Movie></Movie> 
+         <Movie></Movie>
+         <Movie></Movie> 
+         <Movie></Movie>  
+        <Movie></Movie> 
+        <Movie></Movie> 
+      </div>
+    </>
+  );
 }
 
 export default App;
