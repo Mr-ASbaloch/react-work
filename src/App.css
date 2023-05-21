@@ -16,5 +16,20 @@
 text-align: center;
 
 }
+.btn{
+  background-color: blueviolet;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  color: white ;
+}
+.main{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: azure;
+  border: 1px solid black;
+}
 
 
