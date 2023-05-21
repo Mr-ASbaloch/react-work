@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import "./App.css";
 import Movie from "./components/Movie";
+import Movies from './Movie.json';
 // import "./App.css";
 // import Profile from "./components/profile";
 // import Video from "./components/video";
@@ -106,13 +107,20 @@ function App() {
     <>
       <Header></Header>
       <div className="Main">
-        <Movie></Movie> 
-        <Movie></Movie> 
-         <Movie></Movie>
-         <Movie></Movie> 
-         <Movie></Movie>  
-        <Movie></Movie> 
-        <Movie></Movie> 
+      {
+        Movies.map((Element)=>{
+           return (
+            <Movie 
+            title={Element.Title}
+            img={Element.Poster}
+            runTime={Element.Runtime}
+            year={Element.Year}
+        
+            ></Movie>
+           )
+        })
+      }
+      
       </div>
     </>
   );
