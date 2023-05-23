@@ -32,4 +32,18 @@ text-align: center;
   border: 1px solid black;
 }
 
-
+.form{
+  display: flex;
+  flex-direction: column;
+  /* background-color: blueviolet; */
+  width: 30%;
+  margin: 10px 120px;
+  
+}
+.btn1{
+  background-color: blue;
+  color: white;
+  width: 50%;
+margin: 5px 75px;
+padding: 7px;
+}

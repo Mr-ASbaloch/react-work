@@ -1,4 +1,5 @@
 // import React, { useState } from 'react'
+
 import React, { useState } from "react";
 
 function UseState() {
@@ -20,6 +21,9 @@ function UseState() {
       <button className="btn" onClick={handlerDcre}>
         Decrement
       </button>
+      <div>
+      
+      </div>
     </div>
   );
 }
