@@ -36,8 +36,8 @@ function App() {
       </div>
       <New></New>
        */}
+        
        
-        <About></About>
        
 
        </RouterProvider>  
