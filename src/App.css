@@ -47,3 +47,10 @@ text-align: center;
 margin: 5px 75px;
 padding: 7px;
 }
+.fetch{
+  display: flex;
+}.data{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 10px;
+}
