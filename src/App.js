@@ -1,7 +1,9 @@
 // import Header from "./components/Header";
 import "./App.css";
-import Array from "./components/Array";
-import UsObject from "./components/UsObject";
+// import Array from "./components/Array";
+// import Contact from "./components/Contact";
+// import Home from "./components/Home";
+// import UsObject from "./components/UsObject";
 // import Movie from "./components/Movie";
 // import Movies from "./Movie.json";
 // import UseState from "./components/useState";
@@ -9,14 +11,24 @@ import UsObject from "./components/UsObject";
 // import { useEffect, useState } from "react";
 // import { Brightness3TwoTone } from "@mui/icons-material";
 // // import { Key } from "@mui/icons-material";
+import {Routes, Route} from 'react-router-dom'
+import Home from "./components/Home";
+import About from "./components/About";
+import Contact from "./components/Contact";
+// import Navbar from "./components/Nav";
+import Navbar from "./components/Nav";
 
 function App() {
 
 
   return(
     <>
-      <UsObject/>
-    <Array/>
+    <Navbar/>
+      <Routes>
+        <Route  path="/" element={<Home></Home>}></Route>
+        <Route  path="/contact"  element={<Contact/>} ></Route>
+        <Route path="/about" element={<About/>} ></Route>
+      </Routes>
     </>
     
   )
