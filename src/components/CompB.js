@@ -1,11 +1,16 @@
 import React from 'react'
 import CompC from './CompC'
+import { useContext } from 'react'
+import { appState } from '../App'
 
-const CompB = ({data}) => {
+const CompB = () => {
+
+    const appData= useContext(appState)
   return (
     <div>
       <div>CompB</div>
-      <CompC data={data}></CompC>
+      <h3>{appData.data}</h3>
+      <CompC ></CompC>
     </div>
   )
 }

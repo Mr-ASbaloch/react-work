@@ -19,28 +19,27 @@ import "./App.css";
 // // import Navbar from "./components/Nav";
 // import Navbar from "./components/Nav";
 import CompA from "./components/CompA";
+import { createContext } from "react";
 
+const appState = createContext();
 function App() {
-const [data, setData]=useState("hey word ")
+  const [data, setData] = useState("hey word ,its react work ");
+  const [name, setName] = useState({ name: "Saeed", age: 20 });
 
-  return(
+  return (
     <>
-    {/* <Navbar/>
+      {/* <Navbar/>
       <Routes>
         <Route  path="/" element={<Home></Home>}></Route>
         <Route  path="/contact"  element={<Contact/>} ></Route>
         <Route path="/about" element={<About/>} ></Route>
       </Routes> */}
-      <CompA data={data}></CompA>
+
+      <appState.Provider value={{ data, name }}>
+        <CompA data={data}></CompA>
+      </appState.Provider>
     </>
-    
-  )
-
-
-
-
-
-
+  );
 
   // const [state, setState] = useState(2);
   // const [data, setData] = useState([]);
@@ -53,7 +52,7 @@ const [data, setData]=useState("hey word ")
   //     const res = await get.json();
   //     setData(res);
   //     console.log(res);
-    
+
   //   }
   //   getData();
   //   document.title=`( ${state}) employees available`;
@@ -77,7 +76,7 @@ const [data, setData]=useState("hey word ")
   //             year={Element.Year}
   //           ></Movie>
   //         );
-  //       })} 
+  //       })}
 
   //       <UseState></UseState>
   //     </div> */}
@@ -91,17 +90,16 @@ const [data, setData]=useState("hey word ")
   //             <h4>{Element.email}</h4>
   //             <h4>{Element.age}</h4>
   //             <h4>{Element.contactNumber}</h4>
-              
-             
+
   //           </div>
   //         );
   //       })
   //     }
 
-      
   //     {/* <New></New> */}
   //   </>
   // );
 }
 
 export default App;
+export { appState };
