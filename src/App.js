@@ -1,4 +1,5 @@
 // import Header from "./components/Header";
+import { useState } from "react";
 import "./App.css";
 // import Array from "./components/Array";
 // import Contact from "./components/Contact";
@@ -11,24 +12,26 @@ import "./App.css";
 // import { useEffect, useState } from "react";
 // import { Brightness3TwoTone } from "@mui/icons-material";
 // // import { Key } from "@mui/icons-material";
-import {Routes, Route} from 'react-router-dom'
-import Home from "./components/Home";
-import About from "./components/About";
-import Contact from "./components/Contact";
+// import {Routes, Route} from 'react-router-dom'
+// import Home from "./components/Home";
+// import About from "./components/About";
+// import Contact from "./components/Contact";
+// // import Navbar from "./components/Nav";
 // import Navbar from "./components/Nav";
-import Navbar from "./components/Nav";
+import CompA from "./components/CompA";
 
 function App() {
-
+const [data, setData]=useState("hey word ")
 
   return(
     <>
-    <Navbar/>
+    {/* <Navbar/>
       <Routes>
         <Route  path="/" element={<Home></Home>}></Route>
         <Route  path="/contact"  element={<Contact/>} ></Route>
         <Route path="/about" element={<About/>} ></Route>
-      </Routes>
+      </Routes> */}
+      <CompA data={data}></CompA>
     </>
     
   )
